@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 /* In a global CSS or a dedicated file (e.g., App.css) */
 
 .container {
