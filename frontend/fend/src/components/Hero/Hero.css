@@ -1,0 +1,67 @@
+.hero {
+    position: relative;
+    height: 70vh; /* or whatever suits your design */
+    background: url('../../../public/image1.png') no-repeat center center/cover;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 99%;
+    background-color: rgba(0,0,0,0.4); /* subtle overlay */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-email-box {
+    display: flex;
+    margin-top: 1rem;
+  }
+  
+  .hero-email-box input {
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    flex: 1;
+  }
+  
+  .hero-email-box button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .hero-categories {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .hero-categories a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero-categories a:hover {
+    text-decoration: underline;
+  }
+  

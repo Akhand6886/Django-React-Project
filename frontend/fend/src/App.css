@@ -1,0 +1,39 @@
+/* In a global CSS or a dedicated file (e.g., App.css) */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Large card grid for New & Trendy */
+.large-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+}
+
+/* Small card grid for Now Trending */
+.small-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Short Reads could be a horizontal scroll */
+.short-reads {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Blog layout: feature on left, list on right */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.blog-feature { /* left side */ }
+.blog-sidebar { /* right side */ }
