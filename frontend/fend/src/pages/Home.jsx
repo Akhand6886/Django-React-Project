@@ -1,3 +1,4 @@
+// src/pages/Home/Home.jsx
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Hero from '../components/Hero/Hero';
@@ -6,9 +7,7 @@ import CardLarge from '../components/CardLarge/CardLarge';
 import CardSmall from '../components/CardSmall/CardSmall';
 import Footer from '../components/Footer/Footer';
 
-
-const Home = () => {
-  // Sample data
+function Home() {
   const largeCardsData = [
     {
       image: 'https://via.placeholder.com/600x400',
@@ -47,14 +46,14 @@ const Home = () => {
   ];
 
   return (
-    <div>
-       <Navbar /> 
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
       <Hero />
 
       {/* New & Trendy */}
-      <div className="container">
+      <div className="max-w-screen-xl mx-auto px-4 mt-8">
         <SectionHeading title="New & Trendy" />
-        <div className="large-card-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
           {largeCardsData.map((card, idx) => (
             <CardLarge key={idx} {...card} />
           ))}
@@ -62,9 +61,9 @@ const Home = () => {
       </div>
 
       {/* Now Trending */}
-      <div className="container">
+      <div className="max-w-screen-xl mx-auto px-4 mt-8">
         <SectionHeading title="Now Trending" />
-        <div className="small-card-grid">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
           {smallCardsData.map((card, idx) => (
             <CardSmall key={idx} {...card} />
           ))}
@@ -72,10 +71,9 @@ const Home = () => {
       </div>
 
       {/* Short Reads */}
-      <div className="container">
+      <div className="max-w-screen-xl mx-auto px-4 mt-8">
         <SectionHeading title="Short Reads" />
-        <div className="short-reads">
-          {/* horizontal scroll or just inline-block */}
+        <div className="flex overflow-x-auto space-x-4 mt-4">
           {[...Array(5)].map((_, i) => (
             <CardSmall
               key={i}
@@ -88,12 +86,11 @@ const Home = () => {
       </div>
 
       {/* Blog */}
-      <div className="container">
+      <div className="max-w-screen-xl mx-auto px-4 mt-8 mb-8">
         <SectionHeading title="Blog" />
-        {/* Potential tab filters here: "comedy", "fantasy", "drama", etc. */}
-        <div className="blog-layout">
-          {/* Left side: large feature */}
-          <div className="blog-feature">
+        <div className="flex gap-4 mt-4">
+          {/* Left side (large feature) */}
+          <div className="flex-1">
             <CardLarge
               image="https://via.placeholder.com/600x400"
               category="Fantasy"
@@ -102,8 +99,8 @@ const Home = () => {
               excerpt="A featured snippet..."
             />
           </div>
-          {/* Right side: smaller posts list */}
-          <div className="blog-sidebar">
+          {/* Right side (sidebar) */}
+          <div className="w-[300px]">
             {[...Array(4)].map((_, i) => (
               <CardSmall
                 key={i}
@@ -119,6 +116,6 @@ const Home = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default Home;

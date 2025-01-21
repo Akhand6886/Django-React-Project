@@ -1,20 +1,22 @@
+// src/components/CardSmall/CardSmall.jsx
 import React from 'react';
-import './CardSmall.css';
 
-const CardSmall = ({ image, title, date, excerpt }) => {
+function CardSmall({ image, title, date, excerpt }) {
   return (
-    <div className="card-small">
+    <div className="flex gap-2 mb-4">
       <div
-        className="card-small-img"
+        className="w-[80px] h-[80px] bg-center bg-cover flex-shrink-0"
         style={{ backgroundImage: `url(${image})` }}
       />
-      <div className="card-small-content">
-        <h4>{title}</h4>
-        <span>{date}</span>
-        {excerpt && <p>{excerpt}</p>}
+      <div className="flex flex-col justify-center">
+        <h4 className="m-0 text-base font-semibold">{title}</h4>
+        <span className="text-sm text-gray-600">{date}</span>
+        {excerpt && (
+          <p className="mt-2 text-sm text-gray-700">{excerpt}</p>
+        )}
       </div>
     </div>
   );
-};
+}
 
 export default CardSmall;

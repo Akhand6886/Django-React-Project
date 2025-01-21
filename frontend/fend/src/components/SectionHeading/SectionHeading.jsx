@@ -1,12 +1,12 @@
+// src/components/SectionHeading/SectionHeading.jsx
 import React from 'react';
-import './SectionHeading.css';
 
-const SectionHeading = ({ title }) => {
+function SectionHeading({ title }) {
   return (
-    <div className="section-heading">
-      <h2>{title}</h2>
+    <div>
+      <h2 className="text-2xl font-bold">{title}</h2>
     </div>
   );
-};
+}
 
 export default SectionHeading;
