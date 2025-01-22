@@ -15,3 +15,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* For Navbar */
+/* === Animated Underline (from center) === */
+.underline-from-center {
+  position: relative; /* for the pseudo-element positioning */
+}
+
+/* The pseudo-element line */
+.underline-from-center::after {
+  content: "";
+  position: absolute;
+  left: 50%;           /* start from center horizontally */
+  bottom: -2px;        /* just below the text */
+  width: 0%;           /* hidden initially */
+  height: 2px;         /* thickness of the line */
+  background-color: currentColor; /* use the link's current text color */
+  transform: translateX(-50%);    /* center it exactly */
+  transform-origin: center;       /* so it expands from the center */
+  transition: all 0.3s ease;      /* smooth animation */
+}
+
+.underline-from-center:hover::after {
+  width: 100%;         /* the line expands fully from the center */
+}
