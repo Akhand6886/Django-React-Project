@@ -5,7 +5,7 @@ import Home from '../pages/Home';
 import ChapterPage from '../pages/ChapterPages/ChapterPages';
 import Login from '../Login/Login'
 import Register from '../Register/Register'
-
+import AdminBlogs from '../pages/Admin/AdminBlogs';
 
 function AppRoutes() {
   return (
@@ -14,6 +14,7 @@ function AppRoutes() {
       <Route path="/chapter" element={<ChapterPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/admin/blogs" element={<AdminBlogs />} />
     </Routes>
   );
 }
