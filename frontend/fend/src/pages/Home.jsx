@@ -1,4 +1,3 @@
-// src/pages/Home/Home.jsx
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Hero from '../components/Hero/Hero';
@@ -8,6 +7,7 @@ import CardSmall from '../components/CardSmall/CardSmall';
 import Footer from '../components/Footer/Footer';
 
 function Home() {
+  // Sample data for the large cards
   const largeCardsData = [
     {
       image: 'https://via.placeholder.com/600x400',
@@ -25,6 +25,7 @@ function Home() {
     },
   ];
 
+  // Sample data for the small cards
   const smallCardsData = [
     {
       image: 'https://via.placeholder.com/80',
@@ -47,12 +48,16 @@ function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Top navigation */}
       <Navbar />
+
+      {/* Hero section */}
       <Hero />
 
       {/* New & Trendy */}
-      <div className="max-w-screen-xl mx-auto px-4 mt-8">
+      <div className="max-w-screen-xl mx-auto px-4 mt-8 w-full">
         <SectionHeading title="New & Trendy" />
+        {/* 2-column grid on md+ screens, single column on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
           {largeCardsData.map((card, idx) => (
             <CardLarge key={idx} {...card} />
@@ -61,8 +66,9 @@ function Home() {
       </div>
 
       {/* Now Trending */}
-      <div className="max-w-screen-xl mx-auto px-4 mt-8">
+      <div className="max-w-screen-xl mx-auto px-4 mt-8 w-full">
         <SectionHeading title="Now Trending" />
+        {/* 3 columns on md+ screens, single column on mobile */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
           {smallCardsData.map((card, idx) => (
             <CardSmall key={idx} {...card} />
@@ -71,8 +77,9 @@ function Home() {
       </div>
 
       {/* Short Reads */}
-      <div className="max-w-screen-xl mx-auto px-4 mt-8">
+      <div className="max-w-screen-xl mx-auto px-4 mt-8 w-full">
         <SectionHeading title="Short Reads" />
+        {/* Horizontal scroll container: flex row + overflow-x-auto */}
         <div className="flex overflow-x-auto space-x-4 mt-4">
           {[...Array(5)].map((_, i) => (
             <CardSmall
@@ -86,10 +93,10 @@ function Home() {
       </div>
 
       {/* Blog */}
-      <div className="max-w-screen-xl mx-auto px-4 mt-8 mb-8">
+      <div className="max-w-screen-xl mx-auto px-4 mt-8 mb-8 w-full">
         <SectionHeading title="Blog" />
-        <div className="flex gap-4 mt-4">
-          {/* Left side (large feature) */}
+        <div className="flex flex-col md:flex-row gap-4 mt-4">
+          {/* Left side: large feature */}
           <div className="flex-1">
             <CardLarge
               image="https://via.placeholder.com/600x400"
@@ -99,8 +106,9 @@ function Home() {
               excerpt="A featured snippet..."
             />
           </div>
-          {/* Right side (sidebar) */}
-          <div className="w-[300px]">
+
+          {/* Right side: smaller posts list */}
+          <div className="w-full md:w-[300px]">
             {[...Array(4)].map((_, i) => (
               <CardSmall
                 key={i}
@@ -113,6 +121,7 @@ function Home() {
         </div>
       </div>
 
+      {/* Footer at the bottom */}
       <Footer />
     </div>
   );
