@@ -1,28 +1,13 @@
-"""
-URL configuration for server project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
-from django.urls import path
-from blog.views import BlogViewSet
+from django.urls import path, include  # <-- Make sure `include` is imported
 from rest_framework.routers import DefaultRouter
+from blog.views import BlogViewSet  # Assuming BlogViewSet is defined in blog/views.py
 
+# Initialize the router
 router = DefaultRouter()
-router.register(r'blogs', BlogViewSet, basename='blog')
+router.register(r'blogs', BlogViewSet, basename='blog')  # Register your BlogViewSet with the router
 
 urlpatterns = [
-    path('api/', include(router.urls)),
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),  # Django admin
+    path('api/', include(router.urls)),  # Include API routes from the router
 ]

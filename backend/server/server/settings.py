@@ -66,10 +66,10 @@ WSGI_APPLICATION = 'server.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'your_database_name',  # e.g., "mydatabase"
+        'NAME': 'phase1',  # e.g., "mydatabase"
         'USER': 'aksingh6885',      # e.g., "dbuser"
         'PASSWORD': 'eCd03abRoh5MZHRhl9KwIfCkSBwP2bad',  # e.g., "securepassword123"
-        'HOST': 'dpg-cu90572j1k6c73f2qis0-a',          # e.g., "mydb.render.com"
+        'HOST': 'dpg-cu90572j1k6c73f2qis0-a.oregon-postgres.render.com',          # e.g., "mydb.render.com"
         'PORT': '5432',               # Usually 5432 for PostgreSQL
     }
 }
