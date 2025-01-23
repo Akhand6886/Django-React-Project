@@ -65,20 +65,15 @@ WSGI_APPLICATION = 'server.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'your_database_name',  # e.g., "mydatabase"
+        'USER': 'aksingh6885',      # e.g., "dbuser"
+        'PASSWORD': 'eCd03abRoh5MZHRhl9KwIfCkSBwP2bad',  # e.g., "securepassword123"
+        'HOST': 'dpg-cu90572j1k6c73f2qis0-a',          # e.g., "mydb.render.com"
+        'PORT': '5432',               # Usually 5432 for PostgreSQL
     }
 }
-# for replacting sqlite3 with postgresql Replace
-#DATABASES = {
-    #'default': {
-     #   'ENGINE': 'django.db.backends.postgresql',
-     #   'NAME': 'mydatabase',      # The DB name you created
-     #   'USER': 'myuser',          # The user you created
-    #     'HOST': '127.0.0.1',       # Or 'localhost'
-  #      'PORT': '5432',            # Default Postgres port
- #   }
-#}
+
 
 
 
