@@ -15,7 +15,7 @@ function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/admin/blogs" element={<AdminBlogs />} />
-      <Route path="/adminPanel" element={<AppAdmin />} />
+      <Route path="/admin/*" element={<AppAdmin />} />
     </Routes>
   );
 }
