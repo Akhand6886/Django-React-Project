@@ -67,7 +67,7 @@ function Navbar() {
         </li>
         <li>
           <Link
-            to="#"
+            to="/adminPanel"
             className="underline-from-center hover:text-gray-600 transition-colors py-2"
           >
             Manhwa

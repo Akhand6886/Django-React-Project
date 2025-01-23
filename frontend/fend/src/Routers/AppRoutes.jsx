@@ -6,7 +6,7 @@ import ChapterPage from '../pages/ChapterPages/ChapterPages';
 import Login from '../Login/Login'
 import Register from '../Register/Register'
 import AdminBlogs from '../pages/Admin/AdminBlogs';
-
+import AppAdmin from '../admin/AppAdmin';
 function AppRoutes() {
   return (
     <Routes>
@@ -15,6 +15,7 @@ function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/admin/blogs" element={<AdminBlogs />} />
+      <Route path="/adminPanel" element={<AppAdmin />} />
     </Routes>
   );
 }
