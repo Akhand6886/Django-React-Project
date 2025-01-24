@@ -14,7 +14,7 @@ function AppRoutes() {
       <Route path="/chapter" element={<ChapterPage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/admin/panels" element={<AdminPanel />} /> 
+      <Route path="/admin/*" element={<AdminPanel />} /> 
       <Route path="/admin/a" element={<AppAdmin />} />
     </Routes>
   );

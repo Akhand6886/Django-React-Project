@@ -1,8 +1,8 @@
 # blog/views.py
-from rest_framework import viewsets
+from rest_framework.viewsets import ModelViewSet
 from .models import Blog
 from .serializers import BlogSerializer
 
-class BlogViewSet(viewsets.ModelViewSet):
-    queryset = Blog.objects.all().order_by('-created_at')
+class BlogViewSet(ModelViewSet):
+    queryset = Blog.objects.all()
     serializer_class = BlogSerializer
