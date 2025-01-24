@@ -43,7 +43,7 @@ function Navbar() {
       >
         <li>
           <Link
-            to="/"
+            to="/admin"
             className="underline-from-center hover:text-gray-600 transition-colors py-2"
           >
             Home
@@ -59,7 +59,7 @@ function Navbar() {
         </li>
         <li>
           <Link
-            to="/admin/blogs"
+            to="/admin/panels"
             className="underline-from-center hover:text-gray-600 transition-colors py-2"
           >
             Manga
