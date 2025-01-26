@@ -43,8 +43,8 @@ function Navbar() {
       >
         <li>
           <Link
-            to="/admin"
-            className="underline-from-center hover:text-gray-600 transition-colors py-2"
+            to="/"
+            className="underline-from-center font-bold hover:text-gray-600 transition-colors py-2"
           >
             Home
           </Link>
@@ -52,23 +52,23 @@ function Navbar() {
         <li>
           <Link
             to="/chapter"
-            className="underline-from-center hover:text-gray-600 transition-colors py-2"
+            className="underline-from-center font-bold hover:text-gray-600 transition-colors py-2"
           >
             Anime
           </Link>
         </li>
         <li>
           <Link
-            to="/admin/panels"
-            className="underline-from-center hover:text-gray-600 transition-colors py-2"
+            to="/manga"
+            className="underline-from-center font-bold hover:text-gray-600 transition-colors py-2"
           >
             Manga
           </Link>
         </li>
         <li>
           <Link
-            to="/adminPanel"
-            className="underline-from-center hover:text-gray-600 transition-colors py-2"
+            to="/manhwa"
+            className="underline-from-center font-bold hover:text-gray-600 transition-colors py-2"
           >
             Manhwa
           </Link>
@@ -76,7 +76,7 @@ function Navbar() {
         <li>
           <Link
             to="/login"
-            className="underline-from-center hover:text-gray-600 transition-colors py-2"
+            className="underline-from-center font-bold hover:text-gray-600 transition-colors py-2"
           >
             Login
           </Link>
@@ -84,7 +84,7 @@ function Navbar() {
         <li>
           <Link
             to="/register"
-            className="underline-from-center hover:text-gray-600 transition-colors py-2"
+            className="underline-from-center font-bold hover:text-gray-600 transition-colors py-2"
           >
             Sign Up
           </Link>

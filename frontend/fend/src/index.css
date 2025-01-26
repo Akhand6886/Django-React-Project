@@ -17,6 +17,14 @@ code {
 }
 
 
+.loader {
+  border-top-color: #3498db; /* Adjust color to match your theme */
+  border-right-color: transparent;
+  border-bottom-color: #3498db;
+  border-left-color: transparent;
+}
+
+
 /* For Navbar */
 /* === Animated Underline (from center) === */
 .underline-from-center {
