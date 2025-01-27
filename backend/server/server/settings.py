@@ -28,6 +28,12 @@ INSTALLED_APPS = [
     'blog',
     'rest_framework',
     'corsheaders'
+    'rest_framework_simplejwt',
+    
+    # Local apps
+    'apps.users',        # or 'users' if you placed them differently
+    'apps.posts',
+    'apps.categories',
 ]
 
 MIDDLEWARE = [
