@@ -4,7 +4,6 @@ from apps.categories.models import Category
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    picture = models.ImageField(upload_to='posts/')
     content = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
