@@ -1,4 +1,3 @@
-# blog/models.py
 from django.db import models
 
 class Blog(models.Model):

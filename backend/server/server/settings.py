@@ -33,7 +33,8 @@ INSTALLED_APPS = [
     # Local apps
     'apps.users',        # or 'users' if you placed them differently
     'apps.posts',
-    'apps.categories'
+    'apps.categories',
+    'apps.users.apps.UsersConfig'
 ]
 
 
@@ -127,7 +128,6 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOWED_ORIGINS = [

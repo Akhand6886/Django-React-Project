@@ -3,8 +3,7 @@ from django.db import models
 
 class User(AbstractUser):
     """
-    Extend the default Django user with an `is_admin` flag or 
-    any additional fields you might need.
+    Extend the default Django user with additional fields.
     """
     is_admin = models.BooleanField(default=False)
 
