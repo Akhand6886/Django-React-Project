@@ -33,8 +33,7 @@ INSTALLED_APPS = [
     # Local apps
     'apps.users',        # or 'users' if you placed them differently
     'apps.posts',
-    'apps.categories',
-    'apps.users.apps.UsersConfig'
+    'apps.categories'
 ]
 
 
@@ -78,10 +77,10 @@ WSGI_APPLICATION = 'server.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'phase1',  # e.g., "mydatabase"
-        'USER': 'aksingh6885',      # e.g., "dbuser"
-        'PASSWORD': 'eCd03abRoh5MZHRhl9KwIfCkSBwP2bad',  # e.g., "securepassword123"
-        'HOST': 'dpg-cu90572j1k6c73f2qis0-a.oregon-postgres.render.com',          # e.g., "mydb.render.com"
+        'NAME': 'mas',  # e.g., "mydatabase"
+        'USER': 'mas_user',      # e.g., "dbuser"
+        'PASSWORD': 'Vu14tPXGk6CohkMOj1pMXy96iqWkFZ0n',  # e.g., "securepassword123"
+        'HOST': 'dpg-cuhnlgtumphs73fn5sp0-a.oregon-postgres.render.com',          # e.g., "mydb.render.com"
         'PORT': '5432',               # Usually 5432 for PostgreSQL
     }
 }
@@ -128,6 +127,7 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOWED_ORIGINS = [
