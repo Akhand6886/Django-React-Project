@@ -67,7 +67,7 @@ function Navbar() {
         </li>
         <li>
           <Link
-            to="/manhwa"
+            to="/blog"
             className="underline-from-center font-bold hover:text-gray-600 transition-colors py-2"
           >
             Manhwa
