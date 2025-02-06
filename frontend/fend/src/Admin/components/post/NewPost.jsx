@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import AdminLayout from '../../layouts/AdminLayout';
+import AdminLayout from '../../layout/SideBar';
 import Domain from '../../Api/Api';
 import { AuthToken } from '../../Api/Api';
 import Swal from 'sweetalert2';

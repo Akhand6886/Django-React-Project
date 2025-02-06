@@ -5,7 +5,6 @@ import Home from '../pages/Home';
 import ChapterPage from '../pages/ChapterPages/ChapterPages';
 import Login from '../Login/Login'
 import Register from '../Register/Register'
-import AppAdmin from '../pages/Admin/AdminBlogs';
 import AdminLayout from '../Admin/layout/AdminLayout';
 import Blogpage from "../pages/blogpage";
 
@@ -18,7 +17,6 @@ function AppRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/admin/*" element={<AdminLayout />} />
-        <Route path="/admin/a" element={<AppAdmin />} />
         <Route path="/blog" element={<Blogpage />} />
 
     </Routes>

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import AdminLayout from '../../layouts/AdminLayout';
+import AdminLayout from '../../layout/AdminLayout';
 import Domain from '../../Api/Api';
 import { AuthToken } from '../../Api/Api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,7 +17,7 @@ import {
   faPen,
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
-import Loading from '../../layouts/Loading';
+import Loading from '../../layout/Loding';
 
 function Posts() {
   const [postsData, setPostsData] = useState([]);
